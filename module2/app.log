@@ -1,118 +1,40 @@
-2024-09-04 11:25:35.921 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:43:18.230 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:43:18.233 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:43:18.233 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:43:18.248 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:43:18.252 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:43:18.472 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
+2024-09-04 15:40:59.633 | INFO     | model:build_model:10 - starting up model building pipeline
+2024-09-04 15:40:59.634 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 15:40:59.634 | INFO     | collection:load_data_from_db:14 - extracting table from database
+2024-09-04 15:40:59.658 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 15:40:59.662 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 15:41:00.011 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
  X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
  y var:rent
-2024-09-04 11:43:18.474 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:43:18.475 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:43:35.753 | INFO     | model:evaluate_model:51 - evaluating model performance. Score = 0.7674181631290029
-2024-09-04 11:43:35.770 | INFO     | model:save_model:56 - saving a model to a directory: models/rf_v1
-2024-09-04 11:43:35.797 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:43:35.798 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:43:35.826 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:43:35.832 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:43:35.833 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:43:35.857 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:43:35.863 | INFO     | __main__:main:10 - prediction=[1896.39821378]
-2024-09-04 11:45:02.666 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:45:02.670 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:45:02.670 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:45:02.686 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:45:02.690 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:45:02.899 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
+2024-09-04 15:41:00.012 | INFO     | model:split_train_test:33 - splitting into train and test
+2024-09-04 15:41:00.016 | INFO     | model:train_model:42 - training a model with hyperparameters
+2024-09-04 15:41:00.016 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 15:41:24.850 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7692924965335486
+2024-09-04 15:41:24.865 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_db_v1
+2024-09-04 15:41:24.898 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:41:24.898 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:41:24.927 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:41:24.937 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:41:24.937 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:41:24.965 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:41:24.971 | INFO     | __main__:main:10 - prediction=[1884.8652677]
+2024-09-04 15:42:43.130 | INFO     | model:build_model:10 - starting up model building pipeline
+2024-09-04 15:42:43.130 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 15:42:43.130 | INFO     | collection:load_data_from_db:14 - extracting table from database
+2024-09-04 15:42:43.147 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 15:42:43.151 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 15:42:43.512 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
  X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
  y var:rent
-2024-09-04 11:45:02.901 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:45:02.903 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:45:02.904 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
-2024-09-04 11:45:19.864 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7793901188530384
-2024-09-04 11:45:19.870 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_v1
-2024-09-04 11:45:19.880 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:45:19.881 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:45:19.892 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:45:19.895 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:45:19.896 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:45:19.899 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:45:19.902 | INFO     | __main__:main:10 - prediction=[1931.47443327]
-2024-09-04 11:46:14.450 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:46:14.453 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:46:14.454 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:46:14.464 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:46:14.467 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:46:14.670 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
- X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
- y var:rent
-2024-09-04 11:46:14.672 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:46:14.673 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:46:32.125 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7298688714681683
-2024-09-04 11:46:32.136 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_v1
-2024-09-04 11:46:32.155 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:46:32.156 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:46:32.179 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:46:32.184 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:46:32.185 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:46:32.200 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:46:32.204 | INFO     | __main__:main:10 - prediction=[2026.50200397]
-2024-09-04 11:47:21.322 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:47:21.325 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:47:21.325 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:47:21.334 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:47:21.338 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:47:21.540 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
- X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
- y var:rent
-2024-09-04 11:47:21.541 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:47:21.543 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:47:38.733 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7586479183373347
-2024-09-04 11:47:38.749 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_v1
-2024-09-04 11:47:38.773 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:47:38.774 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:47:38.799 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:47:38.803 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:47:38.805 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:47:38.826 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:47:38.832 | INFO     | __main__:main:10 - prediction=[1924.79060648]
-2024-09-04 11:49:04.935 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:49:04.939 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:49:04.940 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:49:04.956 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:49:04.960 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:49:05.187 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
- X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
- y var:rent
-2024-09-04 11:49:05.189 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:49:05.190 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:49:05.191 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
-2024-09-04 11:49:22.515 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.6864785649570209
-2024-09-04 11:49:22.532 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_v1
-2024-09-04 11:49:22.563 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:49:22.564 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:49:22.592 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:49:22.598 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:49:22.599 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:49:22.622 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:49:22.628 | INFO     | __main__:main:10 - prediction=[1983.03373148]
-2024-09-04 11:50:00.443 | INFO     | model:build_model:10 - starting up model building pipeline
-2024-09-04 11:50:00.445 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
-2024-09-04 11:50:00.446 | INFO     | collection:load_data:7 - loading csv file at path rent_apartments.csv
-2024-09-04 11:50:00.459 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
-2024-09-04 11:50:00.461 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
-2024-09-04 11:50:00.664 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
- X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
- y var:rent
-2024-09-04 11:50:00.665 | INFO     | model:split_train_test:33 - splitting into train and test
-2024-09-04 11:50:00.666 | INFO     | model:train_model:42 - training a model with hyperparameters
-2024-09-04 11:50:00.666 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
-2024-09-04 11:50:17.370 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7601362026596078
-2024-09-04 11:50:17.376 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_v1
-2024-09-04 11:50:17.385 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:50:17.386 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:50:17.398 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:50:17.401 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_v1
-2024-09-04 11:50:17.401 | INFO     | model_service:load_model:24 - model rf_v1 exists -> loading model configuration file 
-2024-09-04 11:50:17.407 | INFO     | model_service:predict:28 - making predictions
-2024-09-04 11:50:17.409 | INFO     | __main__:main:10 - prediction=[2094.48206981]
+2024-09-04 15:42:43.514 | INFO     | model:split_train_test:33 - splitting into train and test
+2024-09-04 15:42:43.515 | INFO     | model:train_model:42 - training a model with hyperparameters
+2024-09-04 15:42:43.516 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 15:43:05.867 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7649041091708506
+2024-09-04 15:43:05.886 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_db_v1
+2024-09-04 15:43:05.934 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:43:05.935 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:43:05.979 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:43:05.988 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:43:05.988 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:43:06.018 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:43:06.028 | INFO     | __main__:main:10 - prediction=[1975.48127778]

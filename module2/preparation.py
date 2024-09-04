@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from collection import load_data
+from collection import load_data_from_db
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -10,7 +10,7 @@ def prepare_data():
     logger.info("starting preprocessing pipeline")
     # to prepare dataset we need: 
     #1. load the dataset
-    data = load_data()
+    data = load_data_from_db()
     #2. encode columns like balcony, parking etc
     data_encoded = encode_cat_cols(data)
     #3. parse the garden column

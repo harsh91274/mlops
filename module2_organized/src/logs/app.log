@@ -1,0 +1,106 @@
+2024-09-04 15:40:59.633 | INFO     | model:build_model:10 - starting up model building pipeline
+2024-09-04 15:40:59.634 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 15:40:59.634 | INFO     | collection:load_data_from_db:14 - extracting table from database
+2024-09-04 15:40:59.658 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 15:40:59.662 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 15:41:00.011 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
+ X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
+ y var:rent
+2024-09-04 15:41:00.012 | INFO     | model:split_train_test:33 - splitting into train and test
+2024-09-04 15:41:00.016 | INFO     | model:train_model:42 - training a model with hyperparameters
+2024-09-04 15:41:00.016 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 15:41:24.850 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7692924965335486
+2024-09-04 15:41:24.865 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_db_v1
+2024-09-04 15:41:24.898 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:41:24.898 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:41:24.927 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:41:24.937 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:41:24.937 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:41:24.965 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:41:24.971 | INFO     | __main__:main:10 - prediction=[1884.8652677]
+2024-09-04 15:42:43.130 | INFO     | model:build_model:10 - starting up model building pipeline
+2024-09-04 15:42:43.130 | INFO     | preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 15:42:43.130 | INFO     | collection:load_data_from_db:14 - extracting table from database
+2024-09-04 15:42:43.147 | INFO     | preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 15:42:43.151 | INFO     | preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 15:42:43.512 | INFO     | model:get_X_y:28 - defining Xand Y variables. 
+ X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
+ y var:rent
+2024-09-04 15:42:43.514 | INFO     | model:split_train_test:33 - splitting into train and test
+2024-09-04 15:42:43.515 | INFO     | model:train_model:42 - training a model with hyperparameters
+2024-09-04 15:42:43.516 | DEBUG    | model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 15:43:05.867 | INFO     | model:evaluate_model:53 - evaluating model performance. Score = 0.7649041091708506
+2024-09-04 15:43:05.886 | INFO     | model:save_model:58 - saving a model to a directory: models/rf_db_v1
+2024-09-04 15:43:05.934 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:43:05.935 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:43:05.979 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:43:05.988 | INFO     | model_service:load_model:17 - checking existince of model config file at models/rf_db_v1
+2024-09-04 15:43:05.988 | INFO     | model_service:load_model:24 - model rf_db_v1 exists -> loading model configuration file 
+2024-09-04 15:43:06.018 | INFO     | model_service:predict:28 - making predictions
+2024-09-04 15:43:06.028 | INFO     | __main__:main:10 - prediction=[1975.48127778]
+2024-09-04 17:33:16.152 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:33:16.153 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:33:16.153 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:33:59.225 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:33:59.226 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:33:59.226 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:35:26.739 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:35:26.740 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:35:26.740 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:40:59.045 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:40:59.046 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:40:59.046 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:44:05.790 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:44:05.791 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:44:05.792 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:44:05.808 | INFO     | model.pipeline.preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 17:44:05.813 | INFO     | model.pipeline.preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 17:44:06.213 | INFO     | model.pipeline.model:get_X_y:28 - defining Xand Y variables. 
+ X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
+ y var:rent
+2024-09-04 17:44:06.214 | INFO     | model.pipeline.model:split_train_test:33 - splitting into train and test
+2024-09-04 17:44:06.216 | INFO     | model.pipeline.model:train_model:42 - training a model with hyperparameters
+2024-09-04 17:44:06.217 | DEBUG    | model.pipeline.model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 17:44:29.393 | INFO     | model.pipeline.model:evaluate_model:53 - evaluating model performance. Score = 0.7674610524812797
+2024-09-04 17:44:29.400 | INFO     | model.pipeline.model:save_model:58 - saving a model to a directory: model/models/rf_db_v2
+2024-09-04 17:44:29.428 | INFO     | model.model_service:load_model:17 - checking existince of model config file at model/models/rf_db_v2
+2024-09-04 17:44:29.429 | INFO     | model.model_service:load_model:24 - model rf_db_v2 exists -> loading model configuration file 
+2024-09-04 17:44:29.445 | INFO     | model.model_service:predict:28 - making predictions
+2024-09-04 17:44:29.450 | INFO     | model.model_service:load_model:17 - checking existince of model config file at model/models/rf_db_v2
+2024-09-04 17:44:29.450 | INFO     | model.model_service:load_model:24 - model rf_db_v2 exists -> loading model configuration file 
+2024-09-04 17:44:29.458 | INFO     | model.model_service:predict:28 - making predictions
+2024-09-04 17:44:29.463 | INFO     | __main__:main:10 - prediction=[2040.80708333]
+2024-09-04 17:50:46.276 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:50:46.277 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:50:46.277 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:50:46.302 | INFO     | model.pipeline.preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 17:50:46.307 | INFO     | model.pipeline.preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 17:50:46.762 | INFO     | model.pipeline.model:get_X_y:28 - defining Xand Y variables. 
+ X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
+ y var:rent
+2024-09-04 17:50:46.763 | INFO     | model.pipeline.model:split_train_test:33 - splitting into train and test
+2024-09-04 17:50:46.765 | INFO     | model.pipeline.model:train_model:42 - training a model with hyperparameters
+2024-09-04 17:50:46.765 | DEBUG    | model.pipeline.model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 17:51:12.105 | INFO     | model.pipeline.model:evaluate_model:53 - evaluating model performance. Score = 0.7527965607599566
+2024-09-04 17:51:12.124 | INFO     | model.pipeline.model:save_model:58 - saving a model to a directory: model/models/rf_db_v2
+2024-09-04 17:51:12.157 | INFO     | model.model_service:load_model:17 - checking existince of model config file at model/models/rf_db_v2
+2024-09-04 17:51:12.157 | INFO     | model.model_service:load_model:24 - model rf_db_v2 exists -> loading model configuration file 
+2024-09-04 17:51:12.186 | INFO     | model.model_service:predict:28 - making predictions
+2024-09-04 17:51:12.194 | INFO     | __main__:main:10 - prediction=[2069.35284841]
+2024-09-04 17:51:42.504 | INFO     | model.pipeline.model:build_model:10 - starting up model building pipeline
+2024-09-04 17:51:42.505 | INFO     | model.pipeline.preparation:prepare_data:10 - starting preprocessing pipeline
+2024-09-04 17:51:42.506 | INFO     | model.pipeline.collection:load_data_from_db:13 - extracting table from database
+2024-09-04 17:51:42.521 | INFO     | model.pipeline.preparation:encode_cat_cols:23 - encoding categorical variables: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2024-09-04 17:51:42.525 | INFO     | model.pipeline.preparation:parse_garden_col:27 - parsing garden columns
+2024-09-04 17:51:42.886 | INFO     | model.pipeline.model:get_X_y:28 - defining Xand Y variables. 
+ X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']
+ y var:rent
+2024-09-04 17:51:42.887 | INFO     | model.pipeline.model:split_train_test:33 - splitting into train and test
+2024-09-04 17:51:42.889 | INFO     | model.pipeline.model:train_model:42 - training a model with hyperparameters
+2024-09-04 17:51:42.889 | DEBUG    | model.pipeline.model:train_model:46 - grid space={'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-09-04 17:52:03.809 | INFO     | model.pipeline.model:evaluate_model:53 - evaluating model performance. Score = 0.7071631347616378
+2024-09-04 17:52:03.818 | INFO     | model.pipeline.model:save_model:58 - saving a model to a directory: model/models/rf_db_v2
+2024-09-04 17:52:03.839 | INFO     | model.model_service:load_model:17 - checking existince of model config file at model/models/rf_db_v2
+2024-09-04 17:52:03.840 | INFO     | model.model_service:load_model:24 - model rf_db_v2 exists -> loading model configuration file 
+2024-09-04 17:52:03.860 | INFO     | model.model_service:predict:28 - making predictions
+2024-09-04 17:52:03.864 | INFO     | __main__:main:10 - prediction=[1982.46571429]
