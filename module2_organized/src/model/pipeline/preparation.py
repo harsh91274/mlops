@@ -1,33 +1,86 @@
-import pandas as pd
-import re
-from model.pipeline.collection import load_data_from_db
-import warnings
-warnings.filterwarnings('ignore')
+"""
+Data preparation module for the machine learning project.
 
+This module contains functions for preparing the rental apartment data.
+The data is loaded from the database, categorical variables are encoded,
+and the garden column is parsed.
+
+Attributes:
+None
+
+Functions:
+prepare_data: Prepares the rental apartment data.
+encode_cat_cols: Encodes categorical variables in the data.
+parse_garden_col: Parses the garden column in the data.
+
+Classes:
+None
+"""
+
+# Base Python Libraries
+import re
+import warnings
+
+# Open Source Libraries
+import pandas as pd
 from loguru import logger
 
-def prepare_data():
-    logger.info("starting preprocessing pipeline")
-    # to prepare dataset we need: 
-    #1. load the dataset
+# Imports from other modules
+from model.pipeline.collection import load_data_from_db
+
+warnings.filterwarnings('ignore')
+
+
+def prepare_data() -> pd.DataFrame:
+    """
+    Prepares the rental apartment data.
+
+    Args:
+    None
+
+    Returns:
+    pd.DataFrame: The prepared data as a pandas DataFrame.
+    """
+    logger.info('Starting preprocessing pipeline')
+    # Load the dataset
     data = load_data_from_db()
-    #2. encode columns like balcony, parking etc
-    data_encoded = encode_cat_cols(data)
-    #3. parse the garden column
-    df = parse_garden_col(data_encoded)
+    # Encode categorical columns
+    data_encoded = _encode_cat_cols(data)
+    # Parse the garden column
+    df = _parse_garden_col(data_encoded)
 
     return df
 
-def encode_cat_cols(data):
-    cols=['balcony','parking', 'furnished', 'garage', 'storage']
-    logger.info(f"encoding categorical variables: {cols}")
-    return pd.get_dummies(data, columns = cols, drop_first=True)
 
-def parse_garden_col(data):
-    logger.info("parsing garden columns")
+def _encode_cat_cols(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Encodes categorical variables in the data.
+
+    Args:
+    data (pd.DataFrame): The input data as a pandas DataFrame.
+
+    Returns:
+    pd.DataFrame: The data with encoded categorical variables.
+    """
+    cols = ['balcony', 'parking', 'furnished', 'garage', 'storage']
+    logger.info(f'Encoding categorical variables: {cols}')
+    return pd.get_dummies(data, columns=cols, drop_first=True)
+
+
+def _parse_garden_col(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Parses the garden column in the data.
+
+    Args:
+    data (pd.DataFrame): The input data as a pandas DataFrame.
+
+    Returns:
+    pd.DataFrame: The data with parsed garden column.
+    """
+    logger.info('Parsing garden columns')
     for i in range(len(data)):
-        if data.garden[i]=='Not present':
-            data.garden[i]=0
-        else: 
+        if data.garden[i] == 'Not present':
+            data.garden[i] = 0
+        else:
             data.garden[i] = int(re.findall(r'\d+', data.garden[i])[0])
-    return data 
+    return data
