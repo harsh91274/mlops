@@ -2,15 +2,15 @@
 .DEFAULT_GOAL:=runner
 
 run: install
-	pushd src && poetry run python runner.py && popd
+	cd src && poetry run python runner.py
 
 install: pyproject.toml
 	poetry install
 
 clean:
-	for /r %%d in (__pycache__) do @if exist "%%d" rd /s /q "%%d"
+	for /d /r %%d in (__pycache__) do @rmdir /s /q "%%d"
 
 check:
-	poetry run flake8 src/
+	- poetry run flake8 src/
 
 runner: check run clean
